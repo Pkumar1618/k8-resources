@@ -1,11 +1,11 @@
 # A Pod is the smallest deployable unit in Kubernetes. It is the basic building block used to run containers inside a Kubernetes cluster.
 
 apiVersion: v1
-kind: pod
+kind: Pod
 metadata:
   name: nginx
 spec:
   containers:
-  # it is nothing but docker run -d --name nginx nginx
-  - name: nginx
-    image: nginx
+    # Similar to: docker run -d --name nginx nginx
+    - name: nginx
+      image: nginx
