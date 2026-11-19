@@ -1,0 +1,15 @@
+# In Kubernetes, Labels are key-value pairs attached to Kubernetes resources such as Pods,         Deployments, Services, and Nodes.
+# Labels help us identify, organize, filter, and group Kubernetes resources.
+
+apiVersion: v1
+kind: Pod
+metadata:
+  name: labels
+  labels: 
+    project: expense
+    module: backend
+    environment: dev
+spec:
+  containers:
+  - name: nginx
+    image: nginx
