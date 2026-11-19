@@ -1,0 +1,17 @@
+# In Kubernetes, Environment Variables (ENV) are used to pass configuration values to containers inside a Pod.
+
+apiVersion: v1
+kind: Pod
+metadata: 
+  name: environment
+spec:
+  containers:
+  - name: nginx
+    image: nginx
+    env:
+      - name: course
+        value: devops
+      - name: trainer
+        value: "shiva"
+      - name: duration
+        value: "180hrs"
