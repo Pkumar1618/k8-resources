@@ -1,0 +1,16 @@
+# ConfigMap is a Kubernetes object used to store non-sensitive configuration data as key-value pairs.
+# It allows you to separate application configuration from application code and Docker images.
+# For example, suppose you have an Expense application running in Kubernetes. Your application needs:
+# - Database hostname
+# - Database name
+# - Application environment
+# - Application port
+# Instead of hardcoding these values inside your Dockerfile, you can store them in a Kubernetes ConfigMap and inject them into your Pod.
+
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: nginx-config
+data:
+  course: devops
+  duration: "120hrs"
