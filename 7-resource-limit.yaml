@@ -1,0 +1,21 @@
+# In Kubernetes, Pod resources define how much CPU and memory a container needs and how much it is allowed to consume.
+# Kubernetes uses resource requests and limits to manage resources across worker nodes in an EKS or Kubernetes cluster.
+# There are two important concepts:
+# 1. Requests – Minimum resources requested for scheduling.
+# 2. Limits – Maximum resources a container can consume.
+
+apiVersion: v1
+kind: Pod
+metadata: 
+  name: limits
+spec:
+  containers:
+  - name: nginx
+    image: nginx
+    resources:
+      requests:
+        cpu: 100m
+        memory: 68Mi
+      limits:
+        cpu: 120m
+        memory: 100Mi
