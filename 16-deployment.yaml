@@ -9,7 +9,7 @@ metadata:
     tier: frontend
 
 spec:
-  replicas: 2
+  replicas: 20
 
   selector:
     matchLabels:
